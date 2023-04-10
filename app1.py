@@ -6,7 +6,7 @@ model = pickle.load(open('IRIS-model.pkl', 'rb'))
 
 st.header("Iris Classification:")
 image = Image.open('image.png')
-st.image(image, use_column_width=True,format='PNG')
+st.image(image, use_column_width=True)
 st.write("Please insert values, to get Iris class prediction")
 
 SepalLengthCm = st.slider('SepalLengthCm:', 2.0, 6.0)
@@ -28,3 +28,5 @@ st.subheader('Prediction Percentages:')
 st.write('**Probablity of Iris Class being Iris-setosa is ( in % )**:',pred_proba[0][0]*100)
 st.write('**Probablity of Isis Class being Iris-versicolor is ( in % )**:',pred_proba[0][1]*100)
 st.write('**Probablity of Isis Class being Iris-virginica ( in % )**:',pred_proba[0][2]*100)
+
+
